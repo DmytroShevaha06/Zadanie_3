@@ -58,7 +58,7 @@
 
         <TableRow android:gravity="center">
 
-            <TextView android:text="Larst Name" />
+            <TextView android:text="Last Name" />
 
             <EditText
                 android:id="@+id/editText2"

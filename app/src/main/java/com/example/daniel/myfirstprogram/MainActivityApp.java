@@ -4,6 +4,8 @@ package com.example.daniel.myfirstprogram;
  * Created by daniel on 27.03.2017.
  */
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,6 +43,8 @@ public class MainActivityApp extends Activity {
                 textView.setText("Wciśnięto przycisk 3");
             }
         });
+        Context context = getApplicationContext();
+        final Intent intent = new Intent(context,Obrazek.class);
 
         Button button3 = (Button) findViewById(R.id.button4);
         button3.setOnClickListener(new Button.OnClickListener() {
@@ -50,7 +54,7 @@ public class MainActivityApp extends Activity {
                 String edit2 =  edit.getText()  +" "+  edit1.getText();
                 TextView textView1 = (TextView) findViewById(R.id.textView1);
                 textView1.setText(edit2);
-
+                startActivity(intent);
             }
         });
 
